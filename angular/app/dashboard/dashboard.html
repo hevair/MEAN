@@ -1,0 +1,12 @@
+<content-header name="Dashboard" small="Versão 1.0"></content-header>
+
+<section class="content" ng-controller="DashboardCtrl as dash">
+    <factory-component grid="4" color-class="bg-green" icon-class="fa fa-bank"
+    valor="R$ {{dash.credit | number: 2}}" text="total de Creditos"></factory-component>
+
+    <factory-component grid="4" color-class="bg-red" icon-class="fa fa-credit-card"
+    valor="R$ {{dash.debt | number: 2}}" text="total de Debitos"></factory-component>
+
+    <factory-component grid="4" color-class="bg-blue" icon-class="fa fa-money"
+    valor="R$ {{dash.total | number: 2}}" text="Valor Consolidado"></factory-component>
+</section>

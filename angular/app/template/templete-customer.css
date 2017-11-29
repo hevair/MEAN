@@ -1,0 +1,19 @@
+/*.main-footer{position: fixed; bottom: 0px; width: 100%; margin-left: 223px}*/
+/*.skin-blue .main-header .logo {padding-left: 3px;padding-right: 0}*/
+/*.fixed .content-wrapper, .fixed .right-side {margin-left: 223px}*/
+
+#toast-container{top:70px;}
+.table-actions{width: 140px;}
+html {
+  background-color: #ecf0f5;
+}
+
+.main-footer {
+  position: fixed;
+  bottom:0px;
+  width:100%;
+}
+
+#toast-container {
+  top: 70px;
+}

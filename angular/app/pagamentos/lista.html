@@ -1,0 +1,30 @@
+<div class="box-body">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Mês</th>
+                <th>Ano</th>
+                <th>ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="pagamento in pagCtrl.pagamentos">
+                <td>{{:: pagamento.name }}</td>
+                <td>{{:: pagamento.month }}</td>
+                <td>{{:: pagamento.year }}</td>
+                <td class="table-actions">
+                    <button class="btn btn-warning" ng-click="pagCtrl.showTabUpdate(pagamento)">
+                        <i class="fa fa-pencil"></i></button>
+                    <button class="btn btn-danger" ng-click="pagCtrl.showTabDelete(pagamento)">
+                        <i class="fa fa-trash-o"></i></button>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="box-footer clearfix">
+        <paginator url="/#!/pagamentos" pages="{{pagCtrl.pages}}"></paginator>
+         
+    </div>
+</div>

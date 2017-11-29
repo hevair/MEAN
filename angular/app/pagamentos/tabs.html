@@ -1,0 +1,39 @@
+<content-header name="Ciclo de Pagamentos" small="Cadastro"> </content-header>
+
+<section class="content">
+    <div class="nav nav-tabs-custom" ng-controller="pagamentosCtrl as pagCtrl">
+        <ul class="nav nav-tabs">
+            <li ng-if="pagCtrl.tabList" ng-class="{active: pagCtrl.tabList}">
+               <a href data-target="#tabList" data-toggle="tab"> 
+                 <i class="fa fa-bars"></i> Lista
+               </a>
+            </li>
+            <li ng-if="pagCtrl.tabCreate">
+               <a href data-target="#tabCreate" data-toggle="tab"> 
+                 <i class="fa fa-plus"></i> Incluir
+               </a>
+            </li>
+            <li ng-if="pagCtrl.tabUpdate" ng-class="{active: pagCtrl.tabUpdate}">
+               <a href data-target="#tabUpdate" data-toggle="tab"> 
+                 <i class="fa fa-pencil"></i> Alterar
+               </a>
+            </li>
+            <li ng-if="pagCtrl.tabDelete" ng-class="{active: pagCtrl.tabDelete}">
+               <a href data-target="#tabDelete" data-toggle="tab"> 
+                 <i class="fa fa-trash-o"></i> Exluir
+               </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane" id="tabList" ng-include="'pagamentos/lista.html'"
+             ng-class="{active: pagCtrl.tabList}" ng-if="pagCtrl.tabList"></div>
+            <div class="tab-pane" id="tabCreate" ng-include="'pagamentos/form.html'"
+              ng-if="pagCtrl.tabCreate"></div>
+            <div class="tab-pane" id="tabUpdate" ng-include="'pagamentos/form.html'"
+             ng-class="{active: pagCtrl.tabUpdate}" ng-if="pagCtrl.tabUpdate"></div>
+            <div class="tab-pane" id="tabDelete" ng-include="'pagamentos/form.html'"
+             ng-class="{active: pagCtrl.tabDelete}" ng-if="pagCtrl.tabDelete"></div>
+        </div>
+    </div>
+
+</section>
